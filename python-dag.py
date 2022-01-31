@@ -15,7 +15,7 @@ def print_goodbye():
 #DAG 설정
 dag = DAG(
 	dag_id = 'my_first_dag',
-	start_date = datetime(2021,1,30),
+	start_date = datetime(2022,1,30),
 	schedule_interval = '20 4 * * *'
     )
 
