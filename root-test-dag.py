@@ -4,11 +4,11 @@ from datetime import datetime, timedelta
 from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 
 default_args = { 'owner': 'lattechiffon', 'start_date': datetime(2022, 1, 31)}
-dag = DAG('test-dag', schedule_interval='@once', default_args=default_args)
+dag = DAG('root-test-dag', schedule_interval='@once', default_args=default_args)
 
 ##############################
 k_2 = KubernetesPodOperator(
-    task_id='root-test-task',
+    task_id='test-task',
     name='test-hello-world',
     namespace='airflow',
     image='hello-world:latest',
