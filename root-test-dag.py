@@ -8,7 +8,7 @@ dag = DAG('test-dag', schedule_interval='@once', default_args=default_args)
 
 ##############################
 k_2 = KubernetesPodOperator(
-    task_id='test-task',
+    task_id='root-test-task',
     name='test-hello-world',
     namespace='airflow',
     image='hello-world:latest',
